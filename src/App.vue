@@ -26,9 +26,11 @@ export default {
 /*font-family: 'Merriweather', serif; (400, 700, 900)*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
 /*font-family: 'Noto Sans KR', sans-serif; (300, 400, 500, 700)*/
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
