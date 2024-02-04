@@ -16,18 +16,53 @@
             <label>
               안녕하세요. 꼼꼼하고 끈기 있는 개발자 모수빈입니다.<br />
               2021.08 종로 그린컴퓨터아트학원 웹퍼블리셔 프론트엔드 개발
-              디지털실무 양성과정 수료 후, 2023년 3월부터 방송통신대학교
-              컴퓨터과학과에 재학중입니다.<br />
-              즐거운 마음으로 배워 나가며 끊임없이 발전하는 개발자가 되고
-              싶습니다.
+              디지털실무 양성과정 수료 후,<br />2023년 3월부터 방송통신대학교
+              컴퓨터과학과에 재학중입니다. 즐거운 마음으로 배워 나가며 끊임없이
+              발전하는 개발자가 되고 싶습니다.
             </label>
           </div>
         </div>
       </li>
       <li>
         <h2>| Time Line</h2>
-        <div class="aboutMe-timeLine-graph">
-          <!--1-->
+        <div class="aboutMe-timeLine">
+          <div>
+            <h4>~2019.02</h4>
+            <label class="aboutMe-timeLine-event-text"
+              >청강문화산업대학교 식품영양과 졸업<br />
+              영양사, 위생사 면허 취득
+            </label>
+          </div>
+          <div>
+            <h4>2019.09~2020.03</h4>
+            <label class="aboutMe-timeLine-event-text"
+              >베트남 호치민 인문사회과학대학교 어학당<br />
+              베트남어 VSL1 ~ VSL3 과정 수강
+            </label>
+          </div>
+          <div>
+            <h4>2021.02~2021.08</h4>
+            <label class="aboutMe-timeLine-event-text"
+              >종로 그린컴퓨터아트학원<br />
+              웹퍼블리셔 프론트엔드 개발 디지털실무 양성과정 수강
+            </label>
+          </div>
+          <div>
+            <h4>2021.10~2023.10</h4>
+            <label class="aboutMe-timeLine-event-text"
+              >Telus International AI Korea 2년 재직<br />
+              인공지능 서비스 유지 보수 업무 및 신규 기능 개발 프로젝트 참여
+            </label>
+          </div>
+          <div>
+            <h4>2023.03~</h4>
+            <label class="aboutMe-timeLine-event-text"
+              >방송통신대학교<br />
+              컴퓨터과학과 3학년 편입 후 재학 중
+            </label>
+          </div>
+        </div>
+        <!-- <div class="aboutMe-timeLine-graph">
           <div class="aboutMe-timeLine-graph-event">
             <div class="aboutMe-timeLine-graph-dot">
               <label>2019.02</label>
@@ -40,7 +75,6 @@
               </label>
             </span>
           </div>
-          <!--2-->
           <div class="aboutMe-timeLine-graph-event">
             <div class="aboutMe-timeLine-graph-dot">
               <label>2019.09~2020.03</label>
@@ -48,11 +82,11 @@
             <span class="aboutMe-timeLine-graph-visible">
               <div class="aboutMe-timeLine-graph-line"></div>
               <label class="aboutMe-timeLine-graph-event-text"
-                >호치민 인문사회대학 베트남 VSL1 ~ VSL3 과정 수강
+                >베트남 호치민 인문사회과학대학교 어학당<br />
+                베트남어 VSL1 ~ VSL3 과정 수강
               </label>
             </span>
           </div>
-          <!--3-->
           <div class="aboutMe-timeLine-graph-event">
             <div class="aboutMe-timeLine-graph-dot">
               <label>2021.02~2021.08 </label>
@@ -60,12 +94,11 @@
             <span class="aboutMe-timeLine-graph-visible">
               <div class="aboutMe-timeLine-graph-line"></div>
               <label class="aboutMe-timeLine-graph-event-text"
-                >종로 그린컴퓨터아트학원 웹퍼블리셔 프론트엔드 개발 디지털실무
-                양성과정 수강
+                >종로 그린컴퓨터아트학원<br />
+                웹퍼블리셔 프론트엔드 개발 디지털실무 양성과정 수강
               </label>
             </span>
           </div>
-          <!--4-->
           <div class="aboutMe-timeLine-graph-event">
             <div class="aboutMe-timeLine-graph-dot">
               <label>2021.10~2023.10 </label>
@@ -73,19 +106,19 @@
             <span class="aboutMe-timeLine-graph-visible">
               <div class="aboutMe-timeLine-graph-line"></div>
               <label class="aboutMe-timeLine-graph-event-text"
-                >TIAI Korea에서 2년간 고객사 인공지능 서비스 관련 서비스 유지
-                보수 업무 및 신규 기능 개발 프로젝트 참여
+                >Telus International AI Korea 2년 재직<br />
+                인공지능 서비스 유지 보수 업무 및 신규 기능 개발 프로젝트 참여
               </label>
             </span>
           </div>
-        </div>
+        </div> -->
       </li>
       <li>
-        <h2 class="aboutMe-skills">| Skills</h2>
-        <div class="aboutMe-skills-list">
+        <h2>| Skills</h2>
+        <div class="aboutMe-skills">
           <!-- Frontend -->
-          <p><strong>Frontend</strong></p>
-          <div>
+          <h4>Frontend</h4>
+          <div class="aboutMe-skills-list">
             <img
               alt="html"
               src="https://img.shields.io/badge/html5-E34F26?style=flat-square&logo=html5&logoColor=white"
@@ -116,8 +149,8 @@
             />
           </div>
           <!-- Tools -->
-          <p><strong>Tools</strong></p>
-          <div>
+          <h4>Tools</h4>
+          <div class="aboutMe-skills-list">
             <img
               alt="git"
               src="https://img.shields.io/badge/git-F05032?style=flat-square&logo=git&logoColor=white"
@@ -156,15 +189,14 @@ export default {
 
 <style>
 .aboutMe-part {
-  width: calc(100% - 150px);
-  height: fit-content;
+  /*border: 1px solid hotpink;*/
 }
 .aboutMe-part > ul {
   width: 100%;
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
 }
 .aboutMe-part > ul > li {
-  border: 1px solid green;
+  /*border: 1px solid red;*/
   width: 100%;
   height: fit-content;
   text-align: left;
@@ -176,32 +208,43 @@ export default {
 }
 /*프로필*/
 .aboutMe-profile {
-  border: 1px solid pink;
+  /*border: 1px solid pink;*/
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
+
+  padding: 0px 50px;
 }
 .aboutMe-profile-photo {
   width: 300px;
   height: 300px;
-}
-.aboutMe-profile-photo > img {
-  width: 100%;
-  object-fit: cover;
 }
 .aboutMe-profile-about {
   width: calc(100% - 350px);
 }
 .aboutMe-profile-about > label {
   width: calc(100% - 50px);
+  min-width: 300px;
   font-size: 15px;
   font-weight: 400;
 }
+/*타임라인*/
+.aboutMe-timeLine {
+  padding: 0px 50px;
+}
+.aboutMe-timeLine > div {
+}
+.aboutMe-timeLine > div > h4 {
+  border-bottom: 2px solid black;
+}
+.aboutMe-timeLine > div > label {
+  padding-left: 30px;
+}
 /*타임라인 그래프*/
 .aboutMe-timeLine-graph {
-  border: 1px solid hotpink;
+  /*border: 1px solid hotpink;*/
   width: 100%;
   height: auto;
   padding: 10px;
@@ -211,7 +254,7 @@ export default {
   align-items: baseline;
 }
 .aboutMe-timeLine-graph-event {
-  border: 1px solid red;
+  /*border: 1px solid hotpink;*/
   border-top: 3px solid black;
   width: calc(100% / 4 - 20px);
   height: fit-content;
@@ -284,10 +327,22 @@ export default {
   background-color: #ffc000;
 }
 /*skills*/
+.aboutMe-skills {
+  padding: 0px 50px;
+}
 .aboutMe-skills-list {
-  border: 1px solid hotpink;
+  /*border: 1px solid hotpink;*/
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.aboutMe-skills-list > img {
+  width: fit-content;
+  height: 25px;
+  object-fit: contain;
+  margin-right: 5px;
+  /*border: 1px solid hotpink;*/
 }
 </style>

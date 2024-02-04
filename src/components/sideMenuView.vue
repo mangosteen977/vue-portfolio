@@ -1,19 +1,29 @@
 <template>
   <section class="sideMenu-part">
-    <ul>
-      <li>
-        <div class="sideMenu-part-highlighter"></div>
-        About Me
-      </li>
-      <li>
-        <div class="sideMenu-part-highlighter"></div>
-        Portfolio
-      </li>
-      <li>
-        <div class="sideMenu-part-highlighter"></div>
-        Contact
-      </li>
-    </ul>
+    <router-link to="/" title="About Me" @click="this.currentMenu = 0"
+      ><div
+        class="sideMenu-part-highlighter"
+        v-if="this.currentMenu == 0"
+      ></div>
+      About Me</router-link
+    >
+    <router-link
+      to="/portfolioView"
+      title="Portfolio"
+      @click="this.currentMenu = 1"
+      ><div
+        class="sideMenu-part-highlighter"
+        v-if="this.currentMenu == 1"
+      ></div>
+      Portfolio</router-link
+    >
+    <router-link to="/contactView" title="Contact" @click="this.currentMenu = 2"
+      ><div
+        class="sideMenu-part-highlighter"
+        v-if="this.currentMenu == 2"
+      ></div>
+      Contact</router-link
+    >
   </section>
 </template>
 
@@ -22,7 +32,9 @@ export default {
   name: "sideMenuView",
   props: {},
   data() {
-    return {};
+    return {
+      currentMenu: 0,
+    };
   },
   computed: {},
   created() {},
@@ -35,15 +47,9 @@ export default {
 /*font-family: 'Merriweather', serif; (400, 700, 900)*/
 .sideMenu-part {
   width: 150px;
-  height: fit-content;
-  font-family: "Merriweather", serif;
-  font-weight: 400;
-}
-.sideMenu-part > ul {
-  width: inherit;
   height: auto;
 }
-.sideMenu-part > ul > li {
+.sideMenu-part > a {
   width: inherit;
   height: 40px;
   line-height: 40px;
@@ -51,6 +57,7 @@ export default {
   position: relative;
   text-align: center;
   cursor: pointer;
+  /*border: 1px solid hotpink;*/
 }
 .sideMenu-part-highlighter {
   width: 80px;

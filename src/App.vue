@@ -2,21 +2,23 @@
   <MainView />
   <div class="portfolio-content-part">
     <SideMenuView class="Menu-part" />
-    <AboutMeView />
+    <!-- <AboutMeView /> -->
+    <router-view class="content-part"></router-view>
   </div>
+  <p class="copyright">COPYRIGHT ⓒ 2024 MOSUBIN ALL RIGHTS RESERVED.</p>
 </template>
 
 <script>
 import MainView from "./components/mainView.vue";
 import SideMenuView from "./components/sideMenuView.vue";
-import AboutMeView from "./components/aboutMeView.vue";
+// import AboutMeView from "./components/aboutMeView.vue";
 
 export default {
   name: "App",
   components: {
     MainView,
     SideMenuView,
-    AboutMeView,
+    // AboutMeView,
   },
 };
 </script>
@@ -40,7 +42,7 @@ body {
   color: #111111;
   background-color: #fffcec;
   /*background-color: #f2f1e9;*/
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 ::selection {
   background-color: #ffbf007b;
@@ -59,9 +61,15 @@ main {
 }
 a {
   text-decoration: none;
+  color: black;
+  display: block;
+}
+img {
+  width: 100%;
+  object-fit: cover;
 }
 .portfolio-content-part {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   width: 100%;
   height: fit-content;
   display: flex;
@@ -71,10 +79,29 @@ a {
   padding: 50px 0;
 }
 .Menu-part {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   width: 150px;
   height: fit-content;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
   top: 36px;
   position: sticky;
+}
+.content-part {
+  width: calc(100% - 200px);
+  height: fit-content;
+  overflow: hidden;
+}
+
+.copyright {
+  width: 100%;
+  height: 30px;
+  background-color: none;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 30px;
+  color: #555;
+  text-align: center;
+  font-weight: unset;
+  font-size: 11px;
 }
 </style>
