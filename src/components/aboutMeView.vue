@@ -51,7 +51,7 @@
             <h4>2021.10~2023.10</h4>
             <label class="aboutMe-timeLine-event-text"
               >Telus International AI Korea 2년 재직<br />
-              인공지능 서비스 유지 보수 업무 및 신규 기능 개발 프로젝트 참여
+              인공지능 서비스 유지 보수 및 기능 개발 프로젝트 참여
             </label>
           </div>
           <div>
@@ -107,7 +107,7 @@
               <div class="aboutMe-timeLine-graph-line"></div>
               <label class="aboutMe-timeLine-graph-event-text"
                 >Telus International AI Korea 2년 재직<br />
-                인공지능 서비스 유지 보수 업무 및 신규 기능 개발 프로젝트 참여
+                인공지능 서비스 유지 보수 및 기능 개발 프로젝트 참여
               </label>
             </span>
           </div>
@@ -179,7 +179,9 @@ export default {
   name: "aboutMeView",
   props: {},
   data() {
-    return {};
+    return {
+      skillDetail: [],
+    };
   },
   computed: {},
   created() {},
@@ -210,23 +212,23 @@ export default {
 .aboutMe-profile {
   /*border: 1px solid pink;*/
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-content: center;
-
+  gap: 30px;
   padding: 0px 50px;
 }
 .aboutMe-profile-photo {
-  width: 300px;
-  height: 300px;
+  width: 310px;
+  height: 310px;
 }
 .aboutMe-profile-about {
   width: calc(100% - 350px);
+  min-width: 310px;
 }
 .aboutMe-profile-about > label {
-  width: calc(100% - 50px);
-  min-width: 300px;
+  width: 100%;
   font-size: 15px;
   font-weight: 400;
 }
@@ -337,6 +339,8 @@ export default {
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
+  gap: 5px;
+  padding-left: 10px;
 }
 .aboutMe-skills-list > img {
   width: fit-content;
@@ -344,5 +348,24 @@ export default {
   object-fit: contain;
   margin-right: 5px;
   /*border: 1px solid hotpink;*/
+}
+
+@media (min-width: 480px) and (max-width: 600px) {
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  .aboutMe-profile,
+  .aboutMe-timeLine,
+  .aboutMe-skills {
+    padding: 0px;
+  }
+
+  .aboutMe-timeLine > div > label {
+    padding-left: 10px;
+  }
+  .aboutMe-timeLine > div > label,
+  .aboutMe-profile-about > label {
+    font-size: 14px;
+    font-stretch: semi-expanded;
+  }
 }
 </style>

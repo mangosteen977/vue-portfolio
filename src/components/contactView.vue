@@ -72,7 +72,8 @@ export default {
 .contactView-part {
   width: 100%;
   height: 100vh;
-  padding: 100px 0px;
+  padding-top: 50px;
+  padding-bottom: 100px;
   background-color: none;
   display: flex;
   flex-direction: column;
@@ -85,6 +86,7 @@ export default {
   height: fit-content;
   background-color: none;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   text-align: left;
@@ -124,5 +126,16 @@ export default {
 .copySvg {
   width: 20px;
   height: 20px;
+}
+
+@media (min-width: 480px) and (max-width: 600px) {
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  .icon {
+    width: 100px;
+  }
+  .contactView-part-contents > div > button {
+    font-size: 12px;
+  }
 }
 </style>

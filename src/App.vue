@@ -34,11 +34,10 @@ export default {
 body {
   margin: 0;
   font-family: "Noto Sans KR", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-size: 1rem;
   text-align: center;
   min-width: 320px;
+  height: 100%;
   color: #111111;
   background-color: #fffcec;
   /*background-color: #f2f1e9;*/
@@ -68,31 +67,58 @@ img {
   width: 100%;
   object-fit: cover;
 }
+
+/* 메뉴 + 내용 */
 .portfolio-content-part {
   /*border: 1px solid red;*/
   width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+
   height: fit-content;
   display: flex;
   justify-content: center;
   gap: 60px;
-  grid-gap: 60px;
   padding: 50px 0;
 }
+
+/*메뉴*/
 .Menu-part {
   /*border: 1px solid red;*/
   width: 150px;
   height: fit-content;
   font-family: "Merriweather", serif;
   font-weight: 400;
-  top: 36px;
+  top: 35px;
   position: sticky;
 }
+
+/*내용*/
 .content-part {
   width: calc(100% - 200px);
   height: fit-content;
-  overflow: hidden;
+  padding-right: 20px;
 }
 
+/* tablet/mobile (~ 1024px) */
+@media (min-width: 320px) and (max-width: 1023px) {
+  .portfolio-content-part {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .Menu-part {
+    width: 100%;
+    top: 0px;
+  }
+  .content-part {
+    width: 100%;
+    height: fit-content;
+    padding: 20px 0px;
+  }
+}
+
+/*copyright*/
 .copyright {
   width: 100%;
   height: 30px;

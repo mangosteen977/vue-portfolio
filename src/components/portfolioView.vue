@@ -1,19 +1,30 @@
 <template>
   <section class="portfolioView-part">
-    <ul
+    <div
       class="portfolioView-part-box"
       v-for="list in portfolio_list_arr"
       :key="list.id"
-      @dblclick="goTo(list.type, list.link)"
-      @click="goTo(list.type, list.link)"
     >
-      <li>
-        <img :alt="list.subtitle" :src="list.portImg" />
-      </li>
-      <li>{{ list.title }}</li>
-      <li>{{ list.tools }}</li>
-      <li>{{ list.concept }}</li>
-    </ul>
+      <div
+        class="portfolioView-part-portImg"
+        @click="goTo(list.type, list.link)"
+      >
+        <img
+          :alt="list.title"
+          :src="require(`@/assets/portImg/${list.portImg}`)"
+        />
+      </div>
+      <h3 @click="goTo(list.type, list.link)">{{ list.title }}</h3>
+      <h5>{{ list.tools }}</h5>
+      <label>{{ list.detail }}</label>
+      <label
+        v-if="list.gitHub"
+        @click="goTo('pc', list.gitHub)"
+        class="portfolioView-part-gitHub"
+      >
+        gitHub 레포지토리 : {{ list.gitHub }}
+      </label>
+    </div>
   </section>
 </template>
 
@@ -39,7 +50,7 @@ export default {
           window.open(link);
           break;
         case "mobile":
-          window.open(link, "width=380; height=600;");
+          window.open(link, "", "width=380; height=600;");
 
           break;
         case "pop":
@@ -59,21 +70,49 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: baseline;
+  align-items: stretch;
+  /*border: 1px solid red;*/
 }
 .portfolioView-part-box {
-  background-color: #fff;
-  border-radius: 5px;
   width: calc(50% - 10px);
-  min-width: 300px;
+  max-width: 400px;
+  min-width: 320px;
   margin: 5px;
   padding: 10px 0px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px 1px #a2a2a2;
+  /*border: 1px solid green;*/
 }
-.portfolioView-part-box > li {
-  /*border: 1px solid red;*/
-  margin-top: 5px;
+.portfolioView-part-box:hover {
+  box-shadow: 3px 3px 3px 2px #9e9e9e;
 }
-.portfolioView-part-box > li:nth-of-type(1) > img {
+.portfolioView-part-box > h3 {
+  /*border: 1px solid blue;*/
+  cursor: pointer;
+}
+.portfolioView-part-portImg {
+  /*border: 1px solid hotpink;*/
+  width: calc(100% - 10px);
+  height: fit-content;
+  margin-left: 5px;
+  overflow: hidden;
+  border: 1px solid #eee;
   border-radius: 5px 5px 0 0;
+  cursor: pointer;
+}
+.portfolioView-part-box > label {
+  font-size: 12px;
+  padding: 10px;
+  /*border: 1px solid red;*/
+}
+.portfolioView-part-gitHub {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (min-width: 480px) and (max-width: 600px) {
+}
+@media (min-width: 320px) and (max-width: 479px) {
 }
 </style>
