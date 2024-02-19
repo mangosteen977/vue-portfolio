@@ -15,14 +15,15 @@
         />
       </div>
       <h3 @click="goTo(list.type, list.link)">{{ list.title }}</h3>
-      <h5>{{ list.tools }}</h5>
+      <h6>{{ list.tools }}</h6>
       <label>{{ list.detail }}</label>
+      <h6 v-if="list.notice">{{ list.notice }}</h6>
       <label
         v-if="list.gitHub"
         @click="goTo('pc', list.gitHub)"
         class="portfolioView-part-gitHub"
       >
-        gitHub 레포지토리 : {{ list.gitHub }}
+        gitHub repository : {{ list.gitHub }}
       </label>
     </div>
   </section>
@@ -71,6 +72,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
+  gap: 10px;
   /*border: 1px solid red;*/
 }
 .portfolioView-part-box {
