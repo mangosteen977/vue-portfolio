@@ -101,6 +101,14 @@
               bootstrap
             </div>
           </div>
+          <!-- currently studying -->
+          <h4>currently studying</h4>
+          <div class="aboutMe-skills-list">
+            <div class="aboutMe-skills-badge badge-react" title="react">
+              <span class="aboutMe-skills-badge-svg"></span>
+              react
+            </div>
+          </div>
           <!-- Tools -->
           <h4>Tools</h4>
           <div class="aboutMe-skills-list">
@@ -286,6 +294,14 @@ export default {
 }
 .badge-bootstrap > .aboutMe-skills-badge-svg {
   background-image: url("@/assets/svg/bootstrap.svg");
+}
+/*react*/
+.badge-react {
+  background-color: #61dafb;
+  color: #000000;
+}
+.badge-react > .aboutMe-skills-badge-svg {
+  background-image: url("@/assets/svg/react.svg");
 }
 /*git*/
 .badge-git {
