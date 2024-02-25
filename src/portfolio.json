@@ -138,6 +138,15 @@
             "tools":"Vue.js, CSS, bootstrap, php",
             "detail":"Vue.js 3.0 CLI로 제작되었습니다. pinia를 통해 저장소 관리를 하였고, vue-router를 통한 페이지 이동을 수행합니다. 회원가입 및 저장 된 일기 정보는 php-MySQL DB를 통해 저장하고 조회하여 사용합니다. 회원가입 및 로그인 후 일기 쓰기 및 조회, 캘린더 페이지 조회가 가능합니다.",
             "notice":"회원가입/로그인 후 둘러보실 수 있습니다. 페이지 확인용 아이디 ID : viewID , PW : view031@"
-            }
+        },
+        {
+            "gitHub":"https://github.com/mangosteen977/nomadcoder-react/tree/main/movie-app",
+            "portImg":"port17.png",
+            "type":"pc",
+            "link":"https://mangosteen977.github.io/nomadcoder-react/",
+            "title":"mango Movie(영화 정보)",
+            "tools":"React, CSS",
+            "detail":"React로 제작되었습니다. yts.mx API를 사용하여 장르별 영화 리스트를 제공합니다. 장르별로 영화를 조회할 수 있습니다. 영화 제목 클릭 시 상세 페이지로 이동하여 자세한 정보와 함께 비슷한 영화를 추천합니다."
+        }
     ]
 }
