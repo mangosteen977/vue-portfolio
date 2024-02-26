@@ -108,6 +108,20 @@
               <span class="aboutMe-skills-badge-svg"></span>
               react
             </div>
+            <div
+              class="aboutMe-skills-badge badge-styledcomponents"
+              title="styledcomponents"
+            >
+              <span class="aboutMe-skills-badge-svg"></span>
+              styled-components
+            </div>
+            <div
+              class="aboutMe-skills-badge badge-typescript"
+              title="typescript"
+            >
+              <span class="aboutMe-skills-badge-svg"></span>
+              typescript
+            </div>
           </div>
           <!-- Tools -->
           <h4>Tools</h4>
@@ -302,6 +316,20 @@ export default {
 }
 .badge-react > .aboutMe-skills-badge-svg {
   background-image: url("@/assets/svg/react.svg");
+}
+/*styled-components*/
+.badge-styledcomponents {
+  background-color: #db7093;
+}
+.badge-styledcomponents > .aboutMe-skills-badge-svg {
+  background-image: url("@/assets/svg/styledcomponents.svg");
+}
+/*typescript*/
+.badge-typescript {
+  background-color: #3178c6;
+}
+.badge-typescript > .aboutMe-skills-badge-svg {
+  background-image: url("@/assets/svg/typescript.svg");
 }
 /*git*/
 .badge-git {
