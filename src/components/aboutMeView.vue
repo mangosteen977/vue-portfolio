@@ -257,6 +257,8 @@ export default {
 .aboutMe-skills-badge-svg {
   width: 18px;
   height: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 /*badge list*/
 /*Javascript*/
@@ -322,6 +324,8 @@ export default {
   background-color: #db7093;
 }
 .badge-styledcomponents > .aboutMe-skills-badge-svg {
+  width: 26px;
+  background-size: cover;
   background-image: url("@/assets/svg/styledcomponents.svg");
 }
 /*typescript*/
